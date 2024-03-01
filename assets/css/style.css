@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    list-style: none !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+}
+
 :root {
     --base-color: #FFFFFF;
     --primary-color: #F06500;
     --bg-color: #0C0B0B;
-    --sec-color:#181717;
+    --sec-color: #181717;
 
     --font-family: "Poppins", sans-serif;
 
@@ -24,10 +30,86 @@
     --size-36: 36px;
 
     --lh-33: 33px;
-    --lh-33: 54px;
-    --lh-33: 32px;
-    --lh-33: 25px;
+    --lh-54: 54px;
+    --lh-32: 32px;
+    --lh-25: 25px;
     --lh-61: 61px;
     --lh-95: 95px;
 }
 
+
+.nav-heading {
+    font-family: var(--font-family);
+    font-size: var(--size-36);
+    font-weight: var(--font-w-4);
+    line-height: var(--lh-33);
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--base-color);
+}
+
+.nav-heading span {
+    color: var(--primary-color);
+    font-weight: var(--font-w-7);
+}
+
+.nav-linke {
+    font-family: var(--font-family);
+    font-size: var(--size-18);
+    font-weight: var(--font-w-4);
+    line-height: var(--lh-32);
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--base-color);
+    transition: all 300ms linear;
+    position: relative;
+}
+
+.nav-linke:hover {
+    color: var(--primary-color);
+}
+
+.bg-color {
+    background-color: var(--bg-color);
+}
+
+.nav-linke::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: #F06500;
+    width: 0;
+    height: 2px;
+    transition: all 200ms linear;
+}
+
+.nav-linke:hover::before {
+    width: 100%;
+}
+
+.connect {
+    padding: 7px 23px;
+    font-family: var(--font-family);
+    font-size: var(--size-18);
+    font-weight: var(--font-w-6);
+    line-height: var(--lh-32);
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--base-color);
+    border: none;
+    border-radius: 23.5px;
+    background: linear-gradient(to right, #FEA300, #F06500);
+    transition: all 200ms linear;
+}
+
+.connect:hover {
+    background: linear-gradient(to right, #FFFFFF, #FFFFFF);
+    color: var(--primary-color);
+}
+
+.bg-img {
+    background-image: url(../img/png/section-1bg-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
