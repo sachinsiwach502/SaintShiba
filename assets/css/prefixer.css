@@ -895,3 +895,17 @@
     text-align: center;
     margin-bottom: 32px;
 }
+
+.on-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FFA800 0%, #F06500 100%);
+}
+
+.on-top {
+    display: none;
+}

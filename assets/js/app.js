@@ -41,3 +41,24 @@ accordian.forEach(element => {
     });
 });
 
+let arrow = document.querySelector(".on-top")
+let scroll_pt = 200;
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > scroll_pt) {
+        arrow.style.display = "block";
+    } else {
+        arrow.style.display = "none";
+    }
+});
+
+arrow.addEventListener("click", () => {
+    document.documentElement.scrollTop = 0;
+});
+
+gsap.from(".on-top", {
+    y: 20,
+    repeat: -1,
+    yoyo: true,
+    duration: 1
+})
