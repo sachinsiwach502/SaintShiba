@@ -219,6 +219,8 @@
         left: 0%;
     }
 
+
+
     .accum {
         font-size: var(--size-70);
     }
@@ -375,10 +377,11 @@
 
 .full-cicle:hover {
     background-color: var(--hover-circle);
+
 }
 
 .full-cicle:hover .yellow-cirlce {
-    background-color: var(--ter-colo);
+    background: linear-gradient(90deg, #FFA800 0%, #F06500 100%);
     color: var(--base-color);
 }
 
