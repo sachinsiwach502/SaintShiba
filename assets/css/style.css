@@ -65,6 +65,7 @@
     letter-spacing: 0em;
     text-align: left;
     color: var(--base-color);
+    cursor: pointer;
 }
 
 .nav-heading span {
@@ -104,6 +105,10 @@
 
 .nav-linke:hover::before {
     width: 100%;
+}
+
+.curser {
+    cursor: pointer;
 }
 
 .connect {
@@ -811,6 +816,10 @@
 .right-light {
     bottom: -20px;
     right: 0%;
+}
+
+.w-200 {
+    min-width: 200px;
 }
 
 .red-light {
