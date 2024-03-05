@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -35,6 +28,7 @@
     --sky-blue: #00B2FF;
     --yellow-color: #FFA800;
     --red-color: #FF4560;
+    --nav-color: #000000BF;
 
     --font-w-3: 300;
     --font-w-4: 400;
@@ -103,14 +97,14 @@
 }
 
 .bg-color {
-    background-color: var(--bg-color);
+    background-color: var(--nav-color);
 }
 
 .nav-linke::before {
     content: "";
     position: absolute;
     bottom: 0;
-    background-color: #F06500;
+    background-color: var(--primary-color);
     width: 0;
     height: 2px;
     -webkit-transition: all 200ms linear;
@@ -201,110 +195,6 @@
     color: var(--base-color);
 }
 
-@media (min-width:1200px) {
-    .mt-50 {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width:992px) {
-    .lg-view {
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        left: -100%;
-        background-color: #F06500;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-transition: all 200ms linear;
-        -o-transition: all 200ms linear;
-        transition: all 200ms linear;
-    }
-
-    label[for="menuIcon"] {
-        width: 40px;
-        height: 30px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        /* position: fixed; */
-        z-index: 6;
-        right: 10px;
-        top: 10px;
-    }
-
-    label[for="menuIcon"] span {
-        width: 100%;
-        background-color: var(--base-color);
-        height: 4px;
-    }
-
-    .show {
-        left: 0%;
-    }
-
-
-
-    .accum {
-        font-size: var(--size-70);
-    }
-
-    .lorem {
-        font-size: var(--size-18);
-    }
-
-    .txt-2 {
-        display: none;
-    }
-
-    .mx-lg-mt-5 {
-        margin-top: 30px;
-    }
-}
-
-@media (max-width:576px) {
-    .accum {
-        font-size: var(--size-50);
-    }
-
-    .max-mt-50 {
-        margin-top: 50px;
-    }
-}
-
-@media (max-width:1400px) and (min-width:576px) {
-    .accum {
-        font-size: var(--size-70);
-    }
-
-
-}
-
-@media (max-width:1200px) and (min-width:992px) {
-    .lorem {
-        font-size: var(--size-18);
-    }
-}
 
 .curse {
     font-family: var(--font-family);
@@ -352,7 +242,7 @@
 }
 
 .brdr {
-    border: 2px solid #454444;
+    border: 2px solid var(--nav-color);
     position: relative;
     border-radius: 10px;
     -webkit-transform: translate(0, -140px);
@@ -442,19 +332,7 @@
 
 
 
-@media (min-width: 992px) {
-    .pos_changes {
-        position: absolute;
-        right: 0;
-        width: 50%;
-    }
 
-    .py-89 {
-        padding-top: 89px;
-        padding-bottom: 87px;
-    }
-
-}
 
 .pt-62 {
     padding-top: 62px;
@@ -585,11 +463,7 @@
     background-color: var(--red-color);
 }
 
-@media (max-width:576px) {
-    .max-mt-30 {
-        margin-top: 30px !important;
-    }
-}
+
 
 .t-head {
     font-family: var(--font-family);
@@ -753,42 +627,22 @@
     opacity: 0.7;
 }
 
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 992px) {
-
-
-    /* Place the timelime to the left */
-    .timeline::after {
-        left: 31px;
-    }
-
-    /* Full-width containers */
-    .containers {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    /* Make sure that all arrows are pointing leftwards */
-    .containers::before {
-        left: 60px;
-        border: medium solid white;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent;
-    }
-
-    /* Make sure all circles are at the same spot */
-    .left::after,
-    .right::after {
-        left: 18px;
-    }
-
-    /* Make all right containers behave like the left ones */
-    .right {
-        left: 0%;
-    }
+::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    border-radius: 6px;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--base-color);
+
+}
+
+
 
 .phase {
     font-family: var(--font-family);
@@ -804,24 +658,7 @@
     margin-top: 60px;
 }
 
-@media (min-width: 993px) {
-    .ph_l {
-        text-align: right;
-    }
 
-    .ph_r {
-        text-align: left;
-    }
-
-    .text_r {
-        text-align: left;
-    }
-
-    .text_l {
-        text-align: right;
-    }
-
-}
 
 .accord-head {
     font-family: var(--font-family);
@@ -850,6 +687,7 @@
     padding: 16px;
     border-radius: 10px;
     margin-top: 8px;
+    transition: all 200ms linear;
 }
 
 .top-part {
@@ -908,4 +746,188 @@
 
 .on-top {
     display: none;
+}
+
+/* All media screen */
+
+@media (min-width: 992px) {
+    .pos_changes {
+        position: absolute;
+        right: 0;
+        width: 50%;
+    }
+
+    .py-89 {
+        padding-top: 89px;
+        padding-bottom: 87px;
+    }
+
+}
+
+@media (min-width:1200px) {
+    .mt-50 {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:992px) {
+    .lg-view {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        left: -100%;
+        background-color: var(--bg-color);
+        /* backdrop-filter: blur(40px); */
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-transition: all 200ms linear;
+        -o-transition: all 200ms linear;
+        transition: all 200ms linear;
+    }
+
+    label[for="menuIcon"] {
+        width: 40px;
+        height: 30px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        /* position: fixed; */
+        z-index: 6;
+        right: 10px;
+        top: 10px;
+    }
+
+    label[for="menuIcon"] span {
+        width: 100%;
+        background-color: var(--base-color);
+        height: 4px;
+    }
+
+    .show {
+        left: 0%;
+    }
+
+
+
+    .accum {
+        font-size: var(--size-70);
+    }
+
+    .lorem {
+        font-size: var(--size-18);
+    }
+
+    .txt-2 {
+        display: none;
+    }
+
+    .mx-lg-mt-5 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:576px) {
+    .accum {
+        font-size: var(--size-50);
+    }
+
+    .max-mt-50 {
+        margin-top: 50px;
+    }
+}
+
+
+@media (max-width:1400px) and (min-width:576px) {
+    .accum {
+        font-size: var(--size-70);
+    }
+
+
+}
+
+@media (max-width:1200px) and (min-width:992px) {
+    .lorem {
+        font-size: var(--size-18);
+    }
+}
+
+@media (max-width:576px) {
+    .max-mt-30 {
+        margin-top: 30px !important;
+    }
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 992px) {
+
+
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+
+    /* Full-width containers */
+    .containers {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .containers::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+        left: 18px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .right {
+        left: 0%;
+    }
+}
+
+@media (min-width: 993px) {
+    .ph_l {
+        text-align: right;
+    }
+
+    .ph_r {
+        text-align: left;
+    }
+
+    .text_r {
+        text-align: left;
+    }
+
+    .text_l {
+        text-align: right;
+    }
+
 }

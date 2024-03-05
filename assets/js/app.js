@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     icon.addEventListener("click", () => {
         view.classList.toggle("show");
+        if (view.classList.contains("show")) {
+            body.style.overflow = "hidden"
+        } else {
+            body.style.overflow = "auto"
+        }
     });
 });
 
@@ -61,4 +66,12 @@ gsap.from(".on-top", {
     repeat: -1,
     yoyo: true,
     duration: 1
-})
+});
+
+let links = document.querySelectorAll(".nav-linke")
+let view = document.querySelector(".lg-view");
+links.forEach(other => {
+    other.addEventListener("click", () => {
+        view.classList.remove("show");
+    });
+});
